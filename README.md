@@ -1,6 +1,6 @@
-# cable_ready
+# cable_ready.cr
 
-TODO: Write a description here
+This is a Crystal port of the [CableReady](https://github.com/hopsoft/cable_ready) Ruby library.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      cable_ready:
-       github: your-github-user/cable_ready
+       github: marcoroth/cable_ready
    ```
 
 2. Run `shards install`
@@ -36,4 +36,5 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+- [Nate Hopkins](https://github.com/hopsoft) - creator of the original [CableReady](https://github.com/hopsoft/cable_ready) Ruby libary
+- [Marco Roth](https://github.com/marcoroth) - creator and maintainer
