@@ -8,11 +8,11 @@ This is a Crystal port of the [CableReady](https://github.com/hopsoft/cable_read
 
 1. Add the dependency to your `shard.yml`:
 
-   ```yaml
-   dependencies:
-     cable_ready:
-       github: marcoroth/cable_ready
-   ```
+  ```yaml
+  dependencies:
+   cable_ready:
+     github: marcoroth/cable_ready
+  ```
 
 2. Run `shards install`
 
@@ -28,7 +28,7 @@ This port supports all DOM operations of the original library. Have a look at th
 
 Install the `cable_ready` npm package with `yarn add cable_ready` and establish a websocket connection to the backend.
 
-Here is an example in Amber:
+Here is an example for Amber:
 
 ```javascript
 // src/assets/javascripts/main.js
@@ -88,7 +88,7 @@ struct CableReadySocket < Amber::WebSockets::ClientSocket
   def on_connect
     # do some authentication here
     # return true or false, if false the socket will be closed
-  
+
     true
   end
 end
@@ -137,16 +137,14 @@ Make sure you also setup a route for the Socket in `config/routes.cr`
 # config/routes.cr
 
 Amber::Server.configure do
+  # ...
 
- # ...
- 
- routes :web do
-	# ...
-   websocket "/cable", CableReadySocket
- end
- 
- # ...
- 
+  routes :web do
+    # ...
+    websocket "/cable", CableReadySocket
+  end
+
+  # ...
 end
 ```
 
