@@ -50,7 +50,7 @@ socket.connect().then(() => {
 });
 ```
 
-### Server-side
+### Server-side
 
 The Ruby library uses `snake_case` for the operation names. Currently this port just supports the `camelCase` variants of the operation names.
 
