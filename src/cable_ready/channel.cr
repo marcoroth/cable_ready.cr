@@ -13,7 +13,7 @@ module CableReady
       operations.select! { |_, list| !list.nil? }
 
       #FIXME: swap the socket based on the parameters
-      HomeSocket.broadcast("message", "home:xyz", "home", { "message" => { "cableReady" => true, "operations" => operations } })
+      # HomeSocket.broadcast("message", "home:xyz", "home", { "message" => { "cableReady" => true, "operations" => operations } })
       reset
     end
 

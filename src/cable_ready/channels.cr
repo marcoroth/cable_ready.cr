@@ -15,5 +15,11 @@ module CableReady
     def [](identifier)
       @channels[identifier] ||= CableReady::Channel.new(identifier)
     end
+
+    def broadcast()
+      @channels.each do |_, channel|
+        channel.broadcast
+      end
+    end
   end
 end
