@@ -4,6 +4,6 @@ version: 0.1.0
 authors:
   - Marco Roth <marco.roth@hey.com>
 
-crystal: 0.35.1
+crystal: 1.3.1
 
 license: MIT
