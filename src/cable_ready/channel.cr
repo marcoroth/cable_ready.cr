@@ -5,14 +5,14 @@ module CableReady
 
     def initialize(identifier : String)
       @identifier = identifier
-      @operations = {} of (String | Symbol) => Array(Hash(Symbol,String))
+      @operations = {} of (String | Symbol) => Array(Hash(Symbol, String))
       reset
     end
 
-    def broadcast()
+    def broadcast
       operations.select! { |_, list| !list.nil? }
 
-      #FIXME: swap the socket based on the parameters
+      # FIXME: swap the socket based on the parameters
       # HomeSocket.broadcast("message", "home:xyz", "home", { "message" => { "cableReady" => true, "operations" => operations } })
       reset
     end
@@ -33,7 +33,7 @@ module CableReady
     end
 
     private def reset
-      @operations = {} of (String | Symbol) => Array(Hash(Symbol,String))
+      @operations = {} of (String | Symbol) => Array(Hash(Symbol, String))
     end
   end
 end
